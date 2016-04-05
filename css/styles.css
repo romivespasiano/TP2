@@ -1,0 +1,308 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
+/*font-family: 'Raleway', sans-serif;*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/*font-family: 'Open Sans', sans-serif;*/
+/*selector universal */
+*{box-sizing: border-box;} /*sirve para relleno y borde*/
+
+body{
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*list-style: upper-alpha; cambia por letras mayusculas
+	  list-style: upper-roman; cambia por numeros romanos
+	  list-style: upper-latin;  cambia por letras latinas
+	  list-style: url(...foto.png) se pueden vincular imagenes
+	  list-style: disc; viñeta puntito
+	  list-style: circle; 
+	  list-style: square;
+	*/
+}
+header{
+	z-index: 20000px;
+	background-color: #fff;
+	position: fixed;
+	width: 1200px;
+	top:0;
+	right: 0;
+	left: 0;
+	/* box-sizing: border-box;  la caja va a tener 1200 de ancho */
+	/*min-width: ;
+	min-height: 100px;----minimo posible 
+	max-height: ; ----Maximo posible
+	max-width: ;
+	RELLENOS*/
+
+	padding-top:; /*Costado superior de la caja, el contenido no va a tocar */
+	padding-right: ;  /*Costado lateral derecho hacia dentro */
+	padding-bottom: ;
+	padding-left: ;
+
+	/*SHort hand*/
+	padding: 15px ; /*igual para todos los costados*/
+	/* padding: 40px 10px; 1ero arriba y abajo, derecha e izquierda*/
+	/* padding: 40px 10px 5px;  1er arriba, 2do derecha y tercero abajo*/
+	/*padding: 40px 10px 5px 40px;  1er arriba, 2do derecha 3ro abajo y 4to izquierda*/
+	/*border-top: solid width 3px #000;*/
+	/*border: solid 10px #000;*/
+	/* solid / dotted / dashed / double diferentes tipos de lineas*/
+	/* MARGENES: Generar distancia*/
+	margin: 0 auto; /*auto es el elemento que define el margen a la mitad y lo centra*/
+	/* margin-left:20px ; 
+	margin-top: 50px;
+	margin-right: ;
+	margin-bottom: 20px;*/
+
+}
+.cleaner{
+	clear: both;
+}
+nav{
+	/*background-color: yellow;*/
+	float: right; /* lo mandan a la derecha del elemento padre*/
+
+}
+nav li{
+	display: inline-block; /* Dejo los elementos uno al lado del otro*/
+	margin-left: 15px;
+}
+
+nav a{
+	color:#333;
+}
+.contenedorinicial{
+	background-color:;
+	background: url(../images/indexbanner-bg3.jpg) no-repeat center top scroll;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	min-height: 500px;
+	/*background-color: #000;  fondo de color*/
+}
+.wrapper{
+	width: 1200px;
+	/*background-color: rgba(255, 0,0,0.5);*/
+	margin: auto;
+}
+.main-title{
+	color: #fff;
+	font-size: 40px;
+	/*margin-top: 280px;
+	margin-bottom: 0;*/
+	margin: 280px 0 0;
+	display: inline-block;
+}
+/*Selector de hermano adyacente
+Da estilo a un elemento que se encuentre inmediatamente despues de otro, siempre
+y cuando sean hermanos*/
+.main-title + p{
+	color:#fff;
+	font-size: 18px;
+	width: 550px;
+	line-height: 37px;
+}
+.cuatroelementos {
+	margin-top: 150px;
+
+}
+.cuatroelementos article{
+	text-align: center;
+	width: 300px;
+	float: left;
+	padding: 0 25px;
+	/*background-color: yellow;*/
+}
+.cuatroelementos article img{
+	transition: transform 250ms ease-in;
+	-webkit-transition: transform 250ms ease-in;
+
+}
+.cuatroelementos article:hover img{
+	transform: rotate(360deg) scale(1.2);
+	-ms-trasform: rotate(360deg) scale(1.2);
+	-webkit-transform: rotate(360deg) scale(1.2);
+	box-shadow: 0 0 12px #666;
+	border-radius: 50px;
+}
+/* PSEUDO CLASE :HOVER;
+.cuatroelementos article:hover{
+	background-color: #333;
+}*/
+.buscador{
+	background-color: yellow;
+	position: relative;/*Permite decir que el elemento absoluto se posiciona en base a esa caja y no el body*/
+	margin-top: 230px;
+}
+.buscador input[type=text]{
+	width: calc(100% - 200px);
+	height: 70px;
+	border:solid 1px #ccc;
+	font-family: inherit;
+	font-size: 20px;
+	padding: 0 30px;
+	/*padding: 0 210px 0 30px;*/
+	} /*selector le da estilo a input [type=text]*/
+	.buscador input[type=submit]{
+		width: 200px;
+		height: 70px;
+		background-color: #63bbde;
+		color: #fff;
+		font-size: 20px;
+		font-family: inherit;
+		border: none;
+		position: absolute; /*Se ubica en una capa por encima de otro elemento. Un solo elemento Siempre toma el costado del body
+		propiedades: top / right /left/ buttom*/
+		top:0;
+		right: 0;
+	}
+.subtitle{
+	text-align: center;
+	font-size: 32px;
+	margin:80px 0 10px;
+}
+/*selector de hermano adyacente*/
+.subtitle + p{
+	text-align: center;
+	font-size: 15px;
+
+}
+.caracteristicas{
+	/*background-color: red;*/
+	float:left;
+	width: 350px;
+	padding: 50px 0px;
+}
+.caract-izq article{
+	position: relative;
+	/*background-color: yellow;*/
+	text-align: right;
+	padding-right: 60px;
+
+}
+.caract-izq article img{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
+.caract-der article{
+	position: relative;
+	/*background-color: green;*/
+	padding-left: 60px;
+
+}
+.caract-der article img{
+	position: absolute;
+	left: 0;
+	top:0;
+
+}
+.imagen-mitad{
+	width: 300px;
+	float: left;
+	margin: 40px 100px;
+}
+.contenedordos{
+	background-color:;
+	background: url(../images/pricing-bg.jpg) no-repeat center top scroll;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	min-height: 500px;
+	/*background-color: #000;  fondo de color*/
+}
+.subtitledos{
+	text-align: center;
+	font-size: 32px;
+	margin:220px 0 10px;
+	padding-top: 600px;
+}
+/*selector de hermano adyacente*/
+.subtitledos + p{
+	text-align: center;
+	font-size: 15px;
+
+}
+.advertising{
+	background-color: #233141;
+	height: 100px;
+	text-align: center;
+	font-size: 20px;
+	font-color:#fff;
+	padding-top: 40px;
+}
+.advertising span{
+	color: #00adf0;
+}
+.advertising a{
+	color: #fff;
+}
+.footer{
+	background-color: #151d26;
+	height: 100px;
+	padding: 30px;
+}
+.footer nav{
+	background-color: #151d26;
+	float: right;
+	margin-right: 150px;
+	font-size: 12px;
+
+}
+.footer nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.footer nav li{
+	display: inline-block; /* Dejo los elementos uno al lado del otro*/
+	margin-left: 25px;
+}
+
+.footer nav a{
+	color:#fff;
+}
+.footer p{
+	color: #fff;
+	margin-left: 150px;
+}
+
+p{
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	/* Unidades de medida
+	 -px (medida absoluta)
+	 -em (relativa) En funcion del elemento padre
+	 */
+	 color: ;
+	 /* Se puede escribir el color el ingles o en hexadecimal
+	 hexadecimal
+	 NAME=OLIVE
+	 RGB(255,0,0)
+	 rgba(255,0,0,5)Definir un color pero agregando el color alfa, es decir transparencia
+	 Textos de color transparentados
+	 */
+	 font-weight: normal; /*Bold/ Le saca la negrita a los textos que la tienen por ejemplo h1, etc**/
+}
+
+h1{
+	/*font-weight: normal;*/
+	font-style:; /*Forzar el texto para ponerlo en oblicua cuando la familia de texto no lo tiene*/
+	text-align: left; /*left - right - center - justify   -----> no conviene para dispositivos moviles*/
+	/*text-transform: uppercase; uppercase--> mayusculas
+	none - uppercase - lowercase - capitalize  Evita redigitalizar los textos*/
+	text-decoration: none; /*Permite sacar los subrayados a los links 
+	none - underline - overline - line-through ---> tacha el texto*/
+	letter-spacing: ; /*Interletrado*/
+	word-spacing:; /*interpalabras*/
+	line-height: ; /*Interlineado valor default 6px*/
+}
